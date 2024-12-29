@@ -1,0 +1,156 @@
+body {
+  margin: 15px 40px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #30017c;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks-table {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.tasks-table-column {
+  padding: 15px 20px;
+  width: calc((100% - 60px) / 3);
+
+  background-color: #e3e3e3;
+  border-radius: 5px;
+} 
+
+.tasks-table-column-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+
+  color: #1a012d;
+}
+
+.tasks-table-column-add-card-button {
+  padding: 0;
+
+  font-size: 14px;
+  letter-spacing: 0.7px;
+
+  background-color: transparent;
+  border: none;
+  color: #8d8d8d;
+}
+
+.tasks-table-column-add-card-button:hover {
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 10px;
+
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.card-content {
+  margin: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card:hover {
+  cursor: grab;
+}
+
+.dragged {
+  position: absolute;
+  z-index: 999;
+
+  width: calc((100% - 310px) / 3);
+
+  border-radius: 5px;
+  pointer-events: none;
+  background-color: #fff;
+}
+
+.card.dragged  {
+  cursor: grabbing;
+}
+
+.tasks-table-column-add-card-wrapper {
+  display: none;
+}
+
+.tasks-table-column-textarea {
+  min-width: calc(100% - 20px);
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+
+  border: none;
+  resize: none;
+  color: #6c6c6c;
+  border-radius: 5px;
+}
+
+.tasks-table-column-textarea:focus {
+  outline: 2px solid grey;
+}
+
+.tasks-table-column-button {
+  padding: 15px 30px;
+
+  font-size: 16px;
+
+  color: white;
+  background-color: rgb(2, 151, 2);
+  border: none;
+  border-radius: 5px;
+}
+
+.tasks-table-column-button:hover {
+  cursor: pointer;
+  background-color: rgb(1, 130, 1);
+}
+
+.tasks-table-column-close-button {
+  margin-left: 10px;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.visiable {
+  display: block;
+}
+
+.unvisiable {
+  display: none;
+}
+
+.card-close-button {
+  display: none;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+
+  font-size: 16px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.card:hover .card-close-button {
+  display: block;
+}
